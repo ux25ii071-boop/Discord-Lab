@@ -3,17 +3,27 @@ def responder(mensaje):
 
     if "hola" in mensaje:
         return "Hola, ¿cómo estás?"
+
     elif "adios" in mensaje:
         return "Hasta luego"
+
     else:
         return "No entiendo"
+
+
+def analizar_comando(comando):
+    return responder(comando)
+
 
 def main():
     while True:
         texto = input(">> ")
+
         if texto == "salir":
             break
+
         print(responder(texto))
+
 
 if __name__ == "__main__":
     main()
